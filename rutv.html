@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>LIVE TV</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style>
+    body {
+        background-color: #FFFFFF;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+	overflow: hidden;
+    }
+</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hola_player/1.0.165/hola_player.js"></script>
+</head>
+ 
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter24109063 = new Ya.Metrika({id:24109063,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "https://mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/24109063" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script>
+(function(){
+if (window.innerHeight) {
+    iH = window.innerHeight;
+    iW = window.innerWidth;
+} else {
+    iW = document.documentElement.clientWidth;
+    iH = document.documentElement.clientHeight;
+}
+
+document.write('<video id="myvideo" preload="none" class="vjs-16-9 video-js vjs-default-skin vjs-big-play-centered" height="'+iH+'" width="'+iW+'" controls><source src="https://cdn-cache01.voka.tv/live/972.m3u8" type="application/x-mpegURL"></video>');
+
+window.hola_player({
+    swf: "https://cdnjs.cloudflare.com/ajax/libs/hola_player/1.0.165/videojs.swf",
+    osmf_swf: "https://cdnjs.cloudflare.com/ajax/libs/hola_player/1.0.165/videojs-osmf.swf",
+    player: "#myvideo",
+    graph: false,
+    share: false,
+    use_desktop_skin: true,
+    play_button_color: 'red',
+    tech: 'flash',
+        
+    settings: {
+          quality: true,
+          info: true,
+    },        
+    videojs_options: {
+            fluid: true,
+	
+	html5: {
+            hlsjsConfig: {
+//                debug: true,
+//                initialLiveManifestSize: 1,
+//                enableLazyURLResolve: true,
+                capLevelToPlayerSize: true,
+//                liveSyncDurationCount: 2,
+//                liveMaxLatencyDurationCount: 4,
+//                maxBufferLength: 8,
+//                startLevel: 1
+            }
+        },
+    },
+});
+
+
+})();
+</script>
+
+
+</body>
+</html>
